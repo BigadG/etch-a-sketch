@@ -2,12 +2,22 @@
     --widthPercent: 10%;
   }
 
-.popupButton {
-    background-color: orange;
+.body {
+    display: flex;
+    background-color: darkgray;
+    flex: auto;
+    padding: auto;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .popupButton {
+    background-color: rgb(76, 0, 255);
     display: flex;
     margin: auto;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100px;
     height: 40px;
     justify-content: center;
@@ -26,7 +36,7 @@
 }
 
 #container {
-    background-color: orange;
+    background-color: rgb(79, 0, 153);
     width: 615px;
     height: 615px;
     display: flex;
@@ -34,7 +44,8 @@
     gap: 2px;
     justify-content: center;
     justify-self: center;
-    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .colorChange {
