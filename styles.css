@@ -1,0 +1,42 @@
+:root {
+    --widthPercent: 10%;
+  }
+
+.popupButton {
+    background-color: orange;
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: 900;
+    border: none;
+}
+
+.row {
+    background-color: black;
+    display: flex;
+    flex: auto;
+    aspect-ratio: 1/1;
+    width: var(--widthPercent);
+}
+
+#container {
+    background-color: orange;
+    width: 615px;
+    height: 615px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+}
+
+.colorChange {
+    background-color: aqua;
+}
