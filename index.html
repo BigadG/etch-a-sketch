@@ -6,60 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="body">
         <button class="popupButton">Grid Width</button>
         <div id="container"></div>
     </div>
-    <script>
-
-        let userInput; 
-        const popupButton = document.querySelector('.popupButton')
-        popupButton.addEventListener('mousedown', () => {
-            document.querySelectorAll('.row').forEach(e => e.remove());
-            document.querySelectorAll('.colorChange').forEach(e => e.remove()); //Doesn't work yet
-            userInput = prompt("How many boxes wide would you like the grid to be?\n(must be <100)");
-            boxLoop(userInput);
-            myFunction_set();
-        })
-
-
-       function boxLoop (userInput) {
-        let userInputSquared = userInput ** 2
-        for(i=0; i<9801; ++i) {
-            if (i<userInputSquared) {  
-            const row = document.createElement('div');
-            row.classList.add('row');
-            document.getElementById('container').appendChild(row);
-
-            row.addEventListener('mouseover', () => {
-                row.classList.add('colorChange');
-
-            })
-          } else {
-            break
-          }
-        }
-        }   
-
-
-        let boxWidth = () => { //this section works
-              let x = (((615-(2 * (userInput-1)))/userInput)/615) * 100;
-              let y = x + '%'
-              return y;
-            };
-
-
-        var r = document.querySelector(':root');
-        function myFunction_get() {
-            var rs = getComputedStyle(r);
-            alert(rs.getPropertyValue('--widthPercent'));
-        }
-        function myFunction_set() {
-            r.style.setProperty('--widthPercent', boxWidth());
-        }
-        
-    </script>
 </body>
 </html>
